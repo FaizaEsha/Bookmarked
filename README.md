@@ -2,7 +2,7 @@
 
 **Find your next read.**
 
-A content-based book recommendation engine — tell it three books you love, and it uses TF‑IDF and cosine similarity to find what to read next. No collaborative filtering, no black-box neural nets, just clean, interpretable similarity math wrapped in a UI that doesn't feel like a school project.
+A content-based book recommendation engine — tell it three books you love, and it uses TF‑IDF and cosine similarity to find what to read next.
 
 ---
 
@@ -61,8 +61,8 @@ bookmarked/
 ## 🚀 Getting started
 
 ```bash
-git clone https://github.com/<your-username>/bookmarked.git
-cd bookmarked
+git clone https://github.com/FaizaEsha/Bookmarked.git
+cd Bookmarked
 pip install -r requirements.txt
 python app.py
 ```
@@ -75,7 +75,7 @@ Bookmarked only recognizes the ~70 books in `data/books.csv` (it's content-based
 
 `Harry Potter and the Sorcerer's Stone` · `The Hobbit` · `1984` · `Dune` · `Pride and Prejudice` · `Gone Girl` · `Sapiens: A Brief History of Humankind`
 
-A full set of ready-to-paste test combos (fantasy, dystopian, sci-fi, classics, thrillers) and edge cases — typos, unknown titles, total nonsense — is included in [`test-inputs.pdf`](./test-inputs.pdf).
+A full set of ready-to-paste test combos (fantasy, dystopian, sci-fi, classics, thrillers) and edge cases are included in [`test-inputs.pdf`](./test-inputs.pdf).
 
 ## ⚠️ Limitations
 
