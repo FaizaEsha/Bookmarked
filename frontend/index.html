@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookmarked — Find your next read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <img src="assets/books_stack_main.png" alt="" class="header-deco header-deco-left">
+      <span class="wordmark">Bookmarked</span>
+      <img src="assets/books_stack_main.png" alt="" class="header-deco header-deco-right">
+    </div>
+    <nav class="nav-links">
+      <a href="#" data-view="home" class="nav-link active">Discover</a>
+      <a href="#" data-view="how" class="nav-link">How It Works</a>
+    </nav>
+  </header>
+
+  <div class="ribbon-divider"></div>
+
+  <main class="wrap">
+
+    <!-- ============ HOME / INPUT VIEW ============ -->
+    <section id="view-home" class="view">
+      <div class="hero">
+        <div class="hero-title-row">
+          <img src="assets/quill_inkwell.png" alt="" class="hero-quill">
+          <h1>Find your next read.</h1>
+        </div>
+        <p class="hero-sub">Tell us what you've enjoyed, and we'll find three books that match your taste.</p>
+      </div>
+
+      <form id="preference-form" class="pref-card" novalidate>
+        <p class="pref-label">What have you been reading?</p>
+
+        <div class="pref-inputs">
+          <input type="text" class="pref-input" placeholder="Search for a book..." data-index="0" list="book-titles">
+          <input type="text" class="pref-input" placeholder="Search for another book..." data-index="1" list="book-titles">
+          <input type="text" class="pref-input" placeholder="Search for another book..." data-index="2" list="book-titles">
+        </div>
+        <datalist id="book-titles"></datalist>
+
+        <p id="form-error" class="form-error" hidden>Please enter at least one book to continue.</p>
+
+        <button type="submit" class="btn-primary">Find My Reads</button>
+      </form>
+    </section>
+
+    <!-- ============ RESULTS VIEW ============ -->
+    <section id="view-results" class="view" hidden>
+
+      <div id="results-loading" class="loading" hidden>
+        <div class="spinner"></div>
+        <p>Reading between the lines…</p>
+      </div>
+
+      <div id="results-content" hidden>
+        <h2>Your recommendations</h2>
+        <p class="based-on">Based on: <span id="based-on-list"></span></p>
+
+        <div id="results-cards" class="cards-grid"></div>
+      </div>
+
+      <div id="results-empty" class="empty-state" hidden>
+        <p id="results-empty-message">No suitable recommendations were found for these preferences.</p>
+      </div>
+
+      <button type="button" id="back-to-search" class="btn-secondary">Search again</button>
+    </section>
+
+    <!-- ============ HOW IT WORKS VIEW ============ -->
+    <section id="view-how" class="view" hidden>
+      <h2>How it works</h2>
+      <p class="how-intro">Bookmarked is a content-based recommender: it reads the books you already like and finds others that share their character.</p>
+
+      <div class="steps">
+        <div class="step">
+          <img src="assets/icon_openbook.png" alt="" class="step-icon">
+          <span class="step-number">01</span>
+          <h3>Ingestion</h3>
+          <p>Tell us what you like.</p>
+        </div>
+        <div class="step">
+          <img src="assets/icon_ink.png" alt="" class="step-icon">
+          <span class="step-number">02</span>
+          <h3>TF-IDF</h3>
+          <p>Your preferences become numerical representations.</p>
+        </div>
+        <div class="step">
+          <img src="assets/icon_glasses_books.png" alt="" class="step-icon">
+          <span class="step-number">03</span>
+          <h3>Cosine Similarity</h3>
+          <p>We compare your preferences with available books.</p>
+        </div>
+        <div class="step">
+          <img src="assets/icon_books_twine.png" alt="" class="step-icon">
+          <span class="step-number">04</span>
+          <h3>Top 3</h3>
+          <p>The three closest matches are recommended.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Bookmarked · Find your next read.</p>
+    <p class="footer-author">Built by Faiza Ahmed Esha</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
