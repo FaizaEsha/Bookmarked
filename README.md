@@ -87,7 +87,7 @@ This is a content-based recommender — it only understands the genre and descri
 
 ## 🌱 About
 
-Built as Project 3 (AI Recommendation Logic) for the DecodeLabs AI Engineering Internship — a hands-on exercise in feature extraction and similarity-based ranking, taken a step further with a proper frontend.
+Built aN AI Recommendation Logic for a hands-on exercise in feature extraction and similarity-based ranking, taken a step further with a proper frontend.
 
 ## ✍️ Author
 
